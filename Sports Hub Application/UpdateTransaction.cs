@@ -424,7 +424,7 @@ namespace Subscriptions_Application
 
                                 // Calculate the remaining amount
                                 decimal discountAmount = (price * discountPercentage) / 100;
-                                decimal discountedPrice = price - discountAmount;
+                                decimal discountedPrice = (price * 1.14m) - discountAmount;
                                 decimal remainingAmount = discountedPrice - amountPaid;
 
                                 // Update the RemainingAmount cell
@@ -734,7 +734,7 @@ namespace Subscriptions_Application
                 .Replace('إ', 'ا')  // Normalize 'إ' to 'ا'
                 .Replace('آ', 'ا')  // Normalize 'آ' to 'ا'
            
-                .Replace('ؤ', 'و'); // Normalize 'ؤ' to 'و'
+               ; // Normalize 'ؤ' to 'و'
         }
 
 
@@ -749,7 +749,7 @@ namespace Subscriptions_Application
                 .Replace('ا', 'إ')  // Reverse normalize 'ا' to 'إ'
                 .Replace('ا', 'آ')  // Reverse normalize 'ا' to 'آ'
              
-                .Replace('و', 'ؤ'); // Reverse normalize 'و' to 'ؤ'
+               ; // Reverse normalize 'و' to 'ؤ'
         }
 
 

@@ -27,7 +27,7 @@ public static class DatabaseConfig
 
 
 
-            //  connectionString = $"Data Source=DESKTOP-64N23O5;Initial Catalog=SubscriptionsDB;Integrated Security=True;Encrypt=False";
+             // connectionString = $"Data Source=DESKTOP-64N23O5;Initial Catalog=SubscriptionsDB;Integrated Security=True;Encrypt=False";
 
               connectionString = $"Data Source={serverName};Initial Catalog=SubscriptionsDB;User Id={username};Password={password};Encrypt=False";
             }

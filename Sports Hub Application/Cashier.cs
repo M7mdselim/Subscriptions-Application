@@ -428,7 +428,7 @@ namespace Subscriptions_Application
         {
             string priceColumn;
 
-            // Use if-else instead of switch expression
+            // Determine which price column to use based on the category
             if (category == "عضو")
             {
                 priceColumn = "MemberPrice";
@@ -461,20 +461,30 @@ namespace Subscriptions_Application
                     {
                         await connection.OpenAsync();
                         object result = await command.ExecuteScalarAsync();
+
                         if (result != null && decimal.TryParse(result.ToString(), out decimal price))
                         {
+                            // Calculate VAT (assuming a 14% VAT rate)
+                            decimal vatAmount = price * 0.14M;
+                            decimal totalPriceWithVat = price + vatAmount;
+
                             // Ensure the label update is done on the UI thread
                             if (sportpricelistlabel.InvokeRequired)
                             {
                                 sportpricelistlabel.Invoke(new Action(() =>
                                 {
-                                    sportpricelistlabel.Text = "Total price = " + price.ToString("F2");
+                                    // Update label to show only "Total Price = <total with VAT>"
+                                    sportpricelistlabel.Text = $"Total Price = {totalPriceWithVat:F2}";
                                 }));
                             }
                             else
                             {
-                                sportpricelistlabel.Text = "Total price = " + price.ToString("F2");
+                                // Update label to show only "Total Price = <total with VAT>"
+                                sportpricelistlabel.Text = $"Total Price = {totalPriceWithVat:F2}";
                             }
+
+                            // Store original total price for use in discount logic
+                            originalTotalPrice = totalPriceWithVat;
                         }
                         else
                         {
@@ -1089,11 +1099,11 @@ ORDER BY DateUpdated DESC";
             return text
                 .Replace('أ', 'ا')  // Normalize 'أ' to 'ا'
                 .Replace('إ', 'ا')  // Normalize 'إ' to 'ا'
-                .Replace('آ', 'ا')  // Normalize 'آ' to 'ا'
-                .Replace('ى', 'ي')  // Normalize 'ى' to 'ي'
+                .Replace('آ', 'ا');  // Normalize 'آ' to 'ا'
+               
               
              
-                .Replace('ؤ', 'و'); // Normalize 'ؤ' to 'و'
+               
         }
 
 
@@ -1106,11 +1116,10 @@ ORDER BY DateUpdated DESC";
             return text
                 .Replace('ا', 'أ')  // Reverse normalize 'ا' to 'أ'
                 .Replace('ا', 'إ')  // Reverse normalize 'ا' to 'إ'
-                .Replace('ا', 'آ')  // Reverse normalize 'ا' to 'آ'
-                .Replace('ي', 'ى')  // Reverse normalize 'ي' to 'ى'
+                .Replace('ا', 'آ');  // Reverse normalize 'ا' to 'آ'
+                
            
              
-                .Replace('و', 'ؤ'); // Reverse normalize 'و' to 'ؤ'
         }
 
 
@@ -1538,43 +1547,77 @@ ORDER BY DateUpdated DESC";
 
         private void applyDiscountButton_Click_1(object sender, EventArgs e)
         {
-            decimal totalPrice;
-
-            if (!decimal.TryParse(sportpricelistlabel.Text.Split('=')[1].Trim(), out totalPrice))
+            try
             {
-                MessageBox.Show("Invalid total price.");
-                return;
-            }
+                // Check if the label has been set and is in the correct format
+                if (string.IsNullOrEmpty(sportpricelistlabel.Text) || !sportpricelistlabel.Text.StartsWith("Total Price = "))
+                {
+                    MessageBox.Show("Price details are not set or not in the expected format.");
+                    return;
+                }
 
-            // Prompt for discount percentage
-            string discountInput = Microsoft.VisualBasic.Interaction.InputBox("Enter discount percentage (e.g., 20 for 20%):", "Apply Discount", "0");
-            if (!decimal.TryParse(discountInput, out discountPercentage) || discountPercentage < 0 || discountPercentage > 100)
+                // Extract the total price from the label
+                string totalPriceText = sportpricelistlabel.Text.Split('=')[1].Trim();
+
+                // Parse the total price (this should be the total with VAT)
+                if (!decimal.TryParse(totalPriceText, out decimal totalPriceWithVat))
+                {
+                    MessageBox.Show("Invalid total price format.");
+                    return;
+                }
+
+                decimal vatRate = 0.14M; // 14% VAT rate
+
+                // If a discount has already been applied, revert to the original price
+                if (isDiscountApplied)
+                {
+                    // Reset the price to the original value
+                    sportpricelistlabel.Text = $"Total Price = {originalTotalPrice:F2}";
+                    isDiscountApplied = false;
+                    MessageBox.Show("Discount has been removed. Price reset to the original value.");
+                    return;
+                }
+
+                // If no discount has been applied, proceed to apply a discount
+                if (originalTotalPrice == 0)
+                {
+                    // Store the original total price for future reference
+                    originalTotalPrice = totalPriceWithVat;
+                }
+
+                // To find the original price, we need to first extract the VAT.
+                decimal originalPrice = totalPriceWithVat / (1 + vatRate); // Total price = Original price + VAT
+
+                // Prompt for discount percentage
+                string discountInput = Microsoft.VisualBasic.Interaction.InputBox("Enter discount percentage (e.g., 20 for 20%):", "Apply Discount", "0");
+                if (!decimal.TryParse(discountInput, out discountPercentage) || discountPercentage < 0 || discountPercentage > 100)
+                {
+                    MessageBox.Show("Invalid discount percentage.");
+                    return;
+                }
+
+                // Calculate the discount amount based on the original price
+                decimal discountAmount = (originalPrice * discountPercentage) / 100;
+                decimal discountedPrice = originalPrice - discountAmount;
+
+                // Calculate VAT based on the original price
+                decimal vatAmount = originalPrice * vatRate; // 14% VAT
+
+                // Calculate the new total price (discounted price + VAT)
+                decimal newTotalPrice = discountedPrice + vatAmount;
+
+                // Update the label to reflect only the new total price
+                sportpricelistlabel.Text = $"Total Price = {newTotalPrice:F2}";
+
+                // Set the flag to indicate that a discount has been applied
+                isDiscountApplied = true;
+
+                MessageBox.Show($"Discount applied. New total price: {newTotalPrice:F2}");
+            }
+            catch (Exception ex)
             {
-                MessageBox.Show("Invalid discount percentage.");
-                return;
+                MessageBox.Show($"An error occurred: {ex.Message}");
             }
-
-            if (isDiscountApplied)
-            {
-                // Reset the total price to the original value before applying new discount
-                totalPrice = originalTotalPrice;
-            }
-            else
-            {
-                // Store the original total price before applying the first discount
-                originalTotalPrice = totalPrice;
-            }
-
-            // Calculate the discount amount and the new total price
-            decimal discountAmount = (totalPrice * discountPercentage) / 100;
-            decimal discountedTotal = totalPrice - discountAmount;
-
-            // Update the total price label
-            sportpricelistlabel.Text = "Total price = " + discountedTotal.ToString("0.00");
-
-            MessageBox.Show($"Discount applied. New total price: {discountedTotal:0.00}");
-
-            isDiscountApplied = true; // Set the flag to true indicating the discount has been applied
         }
 
 

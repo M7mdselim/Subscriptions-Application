@@ -115,7 +115,7 @@ namespace Subscriptions_Application
                 .Replace('آ', 'ا')  // Normalize 'آ' to 'ا'
              
            
-                .Replace('ؤ', 'و'); // Normalize 'ؤ' to 'و'
+                ; // Normalize 'ؤ' to 'و'
         }
 
 
@@ -132,7 +132,7 @@ namespace Subscriptions_Application
               
                
               
-                .Replace('و', 'ؤ'); // Reverse normalize 'و' to 'ؤ'
+               ; // Reverse normalize 'و' to 'ؤ'
         }
 
 
