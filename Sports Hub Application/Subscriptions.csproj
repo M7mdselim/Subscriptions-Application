@@ -346,6 +346,7 @@
   <ItemGroup>
     <Content Include="Fun-run-people-logo.ico" />
     <Content Include="logoo.ico" />
+    <None Include="Resources\pngtree-info-vector-icon-png-image_470297.jpg" />
     <None Include="Resources\153-1531682_open-red-back-button-png.png" />
     <Content Include="Resources\187803-200.png" />
     <None Include="Resources\Fun run people logo %281%29.png" />

@@ -83,6 +83,16 @@ namespace Subscriptions_Application.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap App_Poster {
+            get {
+                object obj = ResourceManager.GetObject("App Poster", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Fun_run_people_logo {
             get {
                 object obj = ResourceManager.GetObject("Fun run people logo", resourceCulture);
@@ -96,6 +106,26 @@ namespace Subscriptions_Application.Properties {
         internal static System.Drawing.Bitmap Fun_run_people_logo__1_ {
             get {
                 object obj = ResourceManager.GetObject("Fun run people logo (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_back_button_5021 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-back-button-5021", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_info_vector_icon_png_image_470297 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-info-vector-icon-png-image_470297", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
