@@ -3,15 +3,31 @@
   "WorkspaceRootPath": "D:\\Github\\Subscriptions-Application\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4DA7B957-19A0-4BF5-A2CE-454616D8E108}|Sports Hub Application\\Subscriptions.csproj|d:\\github\\subscriptions-application\\sports hub application\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4DA7B957-19A0-4BF5-A2CE-454616D8E108}|Sports Hub Application\\Subscriptions.csproj|d:\\github\\subscriptions-application\\sports hub application\\databaseconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DA7B957-19A0-4BF5-A2CE-454616D8E108}|Sports Hub Application\\Subscriptions.csproj|solutionrelative:sports hub application\\databaseconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DA7B957-19A0-4BF5-A2CE-454616D8E108}|Sports Hub Application\\Subscriptions.csproj|D:\\Github\\Subscriptions-Application\\sports hub application\\cashier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DA7B957-19A0-4BF5-A2CE-454616D8E108}|Sports Hub Application\\Subscriptions.csproj|solutionrelative:sports hub application\\cashier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DA7B957-19A0-4BF5-A2CE-454616D8E108}|Sports Hub Application\\Subscriptions.csproj|D:\\Github\\Subscriptions-Application\\sports hub application\\cashier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4DA7B957-19A0-4BF5-A2CE-454616D8E108}|Sports Hub Application\\Subscriptions.csproj|solutionrelative:sports hub application\\cashier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DA7B957-19A0-4BF5-A2CE-454616D8E108}|Sports Hub Application\\Subscriptions.csproj|D:\\Github\\Subscriptions-Application\\sports hub application\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4DA7B957-19A0-4BF5-A2CE-454616D8E108}|Sports Hub Application\\Subscriptions.csproj|solutionrelative:sports hub application\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DA7B957-19A0-4BF5-A2CE-454616D8E108}|Sports Hub Application\\Subscriptions.csproj|D:\\Github\\Subscriptions-Application\\sports hub application\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DA7B957-19A0-4BF5-A2CE-454616D8E108}|Sports Hub Application\\Subscriptions.csproj|solutionrelative:sports hub application\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4DA7B957-19A0-4BF5-A2CE-454616D8E108}|Sports Hub Application\\Subscriptions.csproj|d:\\github\\subscriptions-application\\sports hub application\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{4DA7B957-19A0-4BF5-A2CE-454616D8E108}|Sports Hub Application\\Subscriptions.csproj|D:\\Github\\Subscriptions-Application\\sports hub application\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4DA7B957-19A0-4BF5-A2CE-454616D8E108}|Sports Hub Application\\Subscriptions.csproj|solutionrelative:sports hub application\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4DA7B957-19A0-4BF5-A2CE-454616D8E108}|Sports Hub Application\\Subscriptions.csproj|d:\\github\\subscriptions-application\\sports hub application\\userupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{4DA7B957-19A0-4BF5-A2CE-454616D8E108}|Sports Hub Application\\Subscriptions.csproj|D:\\Github\\Subscriptions-Application\\sports hub application\\userupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4DA7B957-19A0-4BF5-A2CE-454616D8E108}|Sports Hub Application\\Subscriptions.csproj|solutionrelative:sports hub application\\userupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -34,8 +50,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
@@ -43,31 +67,76 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Login.cs",
-              "DocumentMoniker": "D:\\Github\\Subscriptions-Application\\Sports Hub Application\\Login.cs",
-              "RelativeDocumentMoniker": "Sports Hub Application\\Login.cs",
-              "ToolTip": "D:\\Github\\Subscriptions-Application\\Sports Hub Application\\Login.cs",
-              "RelativeToolTip": "Sports Hub Application\\Login.cs",
-              "ViewState": "AgIAAMIAAAAAAAAAAAAWwO8AAAAJAAAAAAAAAA==",
+              "Title": "DatabaseConfig.cs",
+              "DocumentMoniker": "D:\\Github\\Subscriptions-Application\\Sports Hub Application\\DatabaseConfig.cs",
+              "RelativeDocumentMoniker": "Sports Hub Application\\DatabaseConfig.cs",
+              "ToolTip": "D:\\Github\\Subscriptions-Application\\Sports Hub Application\\DatabaseConfig.cs",
+              "RelativeToolTip": "Sports Hub Application\\DatabaseConfig.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwBgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T11:09:05.086Z",
+              "WhenOpened": "2025-05-01T07:28:30.657Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Cashier.cs",
+              "DocumentMoniker": "D:\\Github\\Subscriptions-Application\\Sports Hub Application\\Cashier.cs",
+              "RelativeDocumentMoniker": "Sports Hub Application\\Cashier.cs",
+              "ToolTip": "D:\\Github\\Subscriptions-Application\\Sports Hub Application\\Cashier.cs",
+              "RelativeToolTip": "Sports Hub Application\\Cashier.cs",
+              "ViewState": "AgIAAMkAAAAAAAAAAAAIwN8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T07:24:27.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Cashier.cs [Design]",
+              "DocumentMoniker": "D:\\Github\\Subscriptions-Application\\Sports Hub Application\\Cashier.cs",
+              "RelativeDocumentMoniker": "Sports Hub Application\\Cashier.cs",
+              "ToolTip": "D:\\Github\\Subscriptions-Application\\Sports Hub Application\\Cashier.cs [Design]",
+              "RelativeToolTip": "Sports Hub Application\\Cashier.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T07:24:24.703Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Home.cs [Design]",
+              "DocumentMoniker": "D:\\Github\\Subscriptions-Application\\Sports Hub Application\\Home.cs",
+              "RelativeDocumentMoniker": "Sports Hub Application\\Home.cs",
+              "ToolTip": "D:\\Github\\Subscriptions-Application\\Sports Hub Application\\Home.cs [Design]",
+              "RelativeToolTip": "Sports Hub Application\\Home.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T07:24:19.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.cs",
+              "DocumentMoniker": "D:\\Github\\Subscriptions-Application\\Sports Hub Application\\Login.cs",
+              "RelativeDocumentMoniker": "Sports Hub Application\\Login.cs",
+              "ToolTip": "D:\\Github\\Subscriptions-Application\\Sports Hub Application\\Login.cs",
+              "RelativeToolTip": "Sports Hub Application\\Login.cs",
+              "ViewState": "AgIAANMAAAAAAAAAAAAjwO8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T11:09:05.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Login.cs [Design]",
               "DocumentMoniker": "D:\\Github\\Subscriptions-Application\\Sports Hub Application\\Login.cs",
               "RelativeDocumentMoniker": "Sports Hub Application\\Login.cs",
               "ToolTip": "D:\\Github\\Subscriptions-Application\\Sports Hub Application\\Login.cs [Design]",
               "RelativeToolTip": "Sports Hub Application\\Login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T11:08:38.388Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-21T11:08:38.388Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "UserUpdate.Designer.cs",
               "DocumentMoniker": "D:\\Github\\Subscriptions-Application\\Sports Hub Application\\UserUpdate.Designer.cs",
               "RelativeDocumentMoniker": "Sports Hub Application\\UserUpdate.Designer.cs",
@@ -75,24 +144,22 @@
               "RelativeToolTip": "Sports Hub Application\\UserUpdate.Designer.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAAswD0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T10:28:19.311Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T10:28:19.311Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "UserUpdate.cs [Design]",
               "DocumentMoniker": "D:\\Github\\Subscriptions-Application\\Sports Hub Application\\UserUpdate.cs",
               "RelativeDocumentMoniker": "Sports Hub Application\\UserUpdate.cs",
               "ToolTip": "D:\\Github\\Subscriptions-Application\\Sports Hub Application\\UserUpdate.cs [Design]",
               "RelativeToolTip": "Sports Hub Application\\UserUpdate.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T10:28:15.573Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-21T10:28:15.573Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "UpdateTransaction.Designer.cs",
               "DocumentMoniker": "D:\\Github\\Subscriptions-Application\\Sports Hub Application\\UpdateTransaction.Designer.cs",
               "RelativeDocumentMoniker": "Sports Hub Application\\UpdateTransaction.Designer.cs",
@@ -104,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "UpdateTransaction.cs [Design]",
               "DocumentMoniker": "D:\\Github\\Subscriptions-Application\\Sports Hub Application\\UpdateTransaction.cs",
               "RelativeDocumentMoniker": "Sports Hub Application\\UpdateTransaction.cs",
